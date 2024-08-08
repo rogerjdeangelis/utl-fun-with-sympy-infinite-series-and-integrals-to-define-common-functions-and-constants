@@ -122,9 +122,9 @@ Fun with sympy infinite series and integrals to define common functions and cons
     /* %utl_pybegin;                                                   |                                                      */
     /* parmcards4;                                                     |                2    3    4    5    6    7            */
     /* from sympy import symbols, summation, factorial, \              |               x    x    x    x    x    x     / 8\    */
-    /*   oo, pprint, exp, sin, cos, log, series                        |  log(x) = x - -- + -- - -- + -- - -- + -- + O\x  /   */
+    /*   oo, pprint, exp, sin, cos, log, series                        | log(1+x)= x - -- + -- - -- + -- - -- + -- + O\x  /   */
     /* x= symbols('x')                                                 |               2    3    4    5    6    7             */
-    /* n = symbols('n')                                                |                                                      */
+    /* n = symbols('n')                                                |  over (-1,1)                                         */
     /* log_series = series(log(1+x), x, 0, 10)                         |                                                      */
     /* pprint(log_series)                                              |                                                      */
     /* ;;;;                                                            |                                                      */
