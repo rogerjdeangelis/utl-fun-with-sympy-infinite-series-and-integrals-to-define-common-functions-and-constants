@@ -130,7 +130,7 @@ Also you can prove and formulate many identities.
 /*                                                                 |                                                      */
 /*-----------------------------------------------------------------|------------------------------------------------------*/
 /*                                                                 |                                                      */
-/*  NATURAL LOG OF 3                                               |                                                      */
+/*  NATURAL LOG OF 2                                               |                                                      */
 /*                                                                 |                                                      */
 /*  %utl_pybegin;                                                  |            oo                                        */
 /*  parmcards4;                                                    |           ____                                       */
