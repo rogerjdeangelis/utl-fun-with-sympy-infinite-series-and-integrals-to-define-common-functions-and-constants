@@ -132,7 +132,7 @@ Fun with sympy infinite series and integrals to define common functions and cons
     /*                                                                 |                                                      */
     /*-----------------------------------------------------------------|------------------------------------------------------*/
     /*                                                                 |                                                      */
-    /*  NATURAL LOG OF 3                                               |                                                      */
+    /*  NATURAL LOG OF 2                                               |                                                      */
     /*                                                                 |                                                      */
     /*  %utl_pybegin;                                                  |            oo                                        */
     /*  parmcards4;                                                    |           ____                                       */
