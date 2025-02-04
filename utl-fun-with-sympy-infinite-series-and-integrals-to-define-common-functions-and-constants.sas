@@ -98,6 +98,45 @@ Also you can prove and formulate many identities.
 /*                                                                 |                                                      */
 /*-----------------------------------------------------------------|------------------------------------------------------*/
 /*                                                                 |                                                      */
+/*  Show that Eulers constant exp(I*PI)=-1                         |  Eulers constant (see left pane)                     */
+/*                                                                 |                                                      */
+/*  Where                                                          |    I*p            I*p                                */
+/*                                                                 |   e    = -1  or  e    - 1 = 0                        */
+/*      I=sqrt(-1)                                                 |                                                      */
+/*      p=PI                                                       |   Where                                              */
+/*                                                                 |                                                      */
+/*                      2      3    4      5    6       7          |       I=sqrt(-1)                                     */
+/*    I*p              p    I*p    p    I*p    p     I*p           |       p=PI                                           */
+/*   e    =  1 + I*p - -- - ---- + -- + ---- - --- - ---- ...      |                                                      */
+/*                     2     6     24   120    720   5040          |                                                      */
+/*                                                                 |                                                      */
+/*                                                                 |                                                      */
+/*  Split into real (even terms) and odd (imaginary terms)         |                                                      */
+/*                                                                 |                                                      */
+/*                     2    4     6      8                         |                                                      */
+/*         I*p        p    p     p      p                          |                                                      */
+/*  real( e   ) =1 - -- + -- -  --- + -----  ... = cos(p) =-1      |                                                      */
+/*                    2   24    720   40320                        |                                                      */
+/*                                                                 |                                                      */
+/*                                                                 |                                                      */
+/*                             3      5      7                     |                                                      */
+/*              I*p         I*p    I*p    I*p                      |                                                      */
+/*  imaginary( e   ) =I*p - ---- + ---- - ---- ..=I*sin(P) =0      |                                                      */
+/*                           6     120    5040                     |                                                      */
+/*  So                                                             |                                                      */
+/*                                                                 |                                                      */
+/*    I*p                                                          |                                                      */
+/*   e    = cos(p) - I*sin(p)                                      |                                                      */
+/*                                                                 |                                                      */
+/*  But I*sin(p)=0 and cos(p)=-1 so                                |                                                      */
+/*                                                                 |                                                      */
+/*  Therefore                                                      |                                                      */
+/*                                                                 |                                                      */
+/*   I*p            I*p                                            |                                                      */
+/*  e    = -1  or  e    - 1 = 0                                    |                                                      */
+/*                                                                 |                                                      */
+/*------------------------------------------------------------------------------------------------------------------------*/
+/*                                                                 |                                                      */
 /* TRIGOMETRIC TANGENT FUNCTION                                    |                                                      */
 /* ============================                                    |                                                      */
 /*                                                                 |                                                      */
@@ -165,7 +204,7 @@ Also you can prove and formulate many identities.
 /*  A = 1  # Amplitude                                             |      |        /        2*n - 1       |               */
 /*                                                                 |      |       /___,                   |               */
 /*  # Define the Fourier series for a square wave                  |      |       n = 1                   |               */
-/*  fourier_series=4*A/sp.pi*sp.Sum(sp.sin((2*n-1)* \              |     ------------------------  |                      */
+/*  fourier_series=4*A/sp.pi*sp.Sum(sp.sin((2*n-1)* \              |      |     ------------------------  |               */
 /*     2*sp.pi*t / T) / (2*n - 1), (n, 1, sp.oo))                  |      |                pi             |               */
 /*                                                                 |      |                               |               */
 /*  # Simplify the expression                                      |      +-+------+------+------+------+-+               */
@@ -297,3 +336,4 @@ https://github.com/rogerjdeangelis/utl-sympy-technique-for-symbolic-integration-
  \___|_| |_|\__,_|
 
 */
+
