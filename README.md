@@ -1,5 +1,3 @@
-# utl-fun-with-sympy-infinite-series-and-integrals-to-define-common-functions-and-constants
-Fun with sympy infinite series and integrals to define common functions and constants
     %let pgm=utl-fun-with-sympy-infinite-series-and-integrals-to-define-common-functions-and-constants;
 
     Fun with sympy infinite series and integrals to define common functions and constants
@@ -100,6 +98,45 @@ Fun with sympy infinite series and integrals to define common functions and cons
     /*                                                                 |                                                      */
     /*-----------------------------------------------------------------|------------------------------------------------------*/
     /*                                                                 |                                                      */
+    /*  Show that Eulers constant exp(I*PI)=-1                         |  Eulers constant (see left pane)                     */
+    /*                                                                 |                                                      */
+    /*  Where                                                          |    I*p            I*p                                */
+    /*                                                                 |   e    = -1  or  e    - 1 = 0                        */
+    /*      I=sqrt(-1)                                                 |                                                      */
+    /*      p=PI                                                       |   Where                                              */
+    /*                                                                 |                                                      */
+    /*                      2      3    4      5    6       7          |       I=sqrt(-1)                                     */
+    /*    I*p              p    I*p    p    I*p    p     I*p           |       p=PI                                           */
+    /*   e    =  1 + I*p - -- - ---- + -- + ---- - --- - ---- ...      |                                                      */
+    /*                     2     6     24   120    720   5040          |                                                      */
+    /*                                                                 |                                                      */
+    /*                                                                 |                                                      */
+    /*  Split into real (even terms) and odd (imaginary terms)         |                                                      */
+    /*                                                                 |                                                      */
+    /*                     2    4     6      8                         |                                                      */
+    /*         I*p        p    p     p      p                          |                                                      */
+    /*  real( e   ) =1 - -- + -- -  --- + -----  ... = cos(p) =-1      |                                                      */
+    /*                    2   24    720   40320                        |                                                      */
+    /*                                                                 |                                                      */
+    /*                                                                 |                                                      */
+    /*                             3      5      7                     |                                                      */
+    /*              I*p         I*p    I*p    I*p                      |                                                      */
+    /*  imaginary( e   ) =I*p - ---- + ---- - ---- ..=I*sin(P) =0      |                                                      */
+    /*                           6     120    5040                     |                                                      */
+    /*  So                                                             |                                                      */
+    /*                                                                 |                                                      */
+    /*    I*p                                                          |                                                      */
+    /*   e    = cos(p) - I*sin(p)                                      |                                                      */
+    /*                                                                 |                                                      */
+    /*  But I*sin(p)=0 and cos(p)=-1 so                                |                                                      */
+    /*                                                                 |                                                      */
+    /*  Therefore                                                      |                                                      */
+    /*                                                                 |                                                      */
+    /*   I*p            I*p                                            |                                                      */
+    /*  e    = -1  or  e    - 1 = 0                                    |                                                      */
+    /*                                                                 |                                                      */
+    /*------------------------------------------------------------------------------------------------------------------------*/
+    /*                                                                 |                                                      */
     /* TRIGOMETRIC TANGENT FUNCTION                                    |                                                      */
     /* ============================                                    |                                                      */
     /*                                                                 |                                                      */
@@ -124,7 +161,7 @@ Fun with sympy infinite series and integrals to define common functions and cons
     /* from sympy import symbols, summation, factorial, \              |               x    x    x    x    x    x     / 8\    */
     /*   oo, pprint, exp, sin, cos, log, series                        | log(1+x)= x - -- + -- - -- + -- - -- + -- + O\x  /   */
     /* x= symbols('x')                                                 |               2    3    4    5    6    7             */
-    /* n = symbols('n')                                                |  over (-1,1)                                         */
+    /* n = symbols('n')                                                | over (-1,1)                                          */
     /* log_series = series(log(1+x), x, 0, 10)                         |                                                      */
     /* pprint(log_series)                                              |                                                      */
     /* ;;;;                                                            |                                                      */
@@ -140,7 +177,7 @@ Fun with sympy infinite series and integrals to define common functions and cons
     /*  n = symbols('n')                                               |            \        n + 1                            */
     /*  alternating_harmonic = Sum((-1)**(n+1) / n, (n, 1, oo))        |             \   (-1)                                 */
     /*  pprint(alternating_harmonic)                                   |  log(2) =   /   ---------                            */
-    /*  print(alternating_harmonic.doit())                             |            /        n                                */
+    /*  print(alternating_harmonic.doit())                             |            /       n                                 */
     /*  ;;;;                                                           |           /___,                                      */
     /*  %utl_pyend;                                                    |           n = 1                                      */
     /*                                                                 |                                                      */
@@ -167,7 +204,7 @@ Fun with sympy infinite series and integrals to define common functions and cons
     /*  A = 1  # Amplitude                                             |      |        /        2*n - 1       |               */
     /*                                                                 |      |       /___,                   |               */
     /*  # Define the Fourier series for a square wave                  |      |       n = 1                   |               */
-    /*  fourier_series=4*A/sp.pi*sp.Sum(sp.sin((2*n-1)* \              |     ------------------------  |                      */
+    /*  fourier_series=4*A/sp.pi*sp.Sum(sp.sin((2*n-1)* \              |      |     ------------------------  |               */
     /*     2*sp.pi*t / T) / (2*n - 1), (n, 1, sp.oo))                  |      |                pi             |               */
     /*                                                                 |      |                               |               */
     /*  # Simplify the expression                                      |      +-+------+------+------+------+-+               */
