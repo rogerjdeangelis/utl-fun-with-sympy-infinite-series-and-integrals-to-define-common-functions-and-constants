@@ -1,0 +1,15 @@
+NOTE: Jenner v1.5.37 (build v1.5.37+886f95a5f1.20260717T051227Z.x86_64-unknown-linux-gnu)
+
+NOTE: Option OBS changed to 100.
+NOTE: DATA square
+
+
+NOTE: Wrote square (100 rows, 7 columns).
+NOTE: DATA elapsed:
+  wall  3.57 seconds
+  cpu   3.57 seconds
+NOTE: Option LS changed to 64.
+NOTE: Option PS changed to 24.
+NOTE: PROC PLOT data=square
+
+NOTE: PROC PLOT produced 1 plot(s) from 100 observations.

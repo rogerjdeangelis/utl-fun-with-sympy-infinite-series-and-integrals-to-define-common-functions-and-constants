@@ -1,0 +1,7 @@
+{
+  "bundle": "t001_fourier_square_wave",
+  "source_file": "utl-fun-with-sympy-infinite-series-and-integrals-to-define-common-functions-and-constants.sas",
+  "source_blob_sha": "76318f81ba39d5265266f5adc681ea91852dde02",
+  "source_commit": "d315265c58dc2f4092cc9adacb10ee23ce15a611",
+  "notes": "Author's FOURIER PERIODIC SQUARE WAVE SAS block, extracted verbatim from the comment framing in the source file. A DATA step accumulates the odd-harmonic Fourier sine series y=(4/pi)*SUM sin(t*(4n-2)/2)/(2n-1) into dataset 'square', then PROC PLOT (ls=64 ps=24, box, vaxis -1.5..1.5, href/haxis reference lines) renders it. No data files needed - self-contained (constant('pi') + do-loops). autoexec caps obs=100 for the captured run. Runs on Jenner v1.5.37, status ok, exit 0, no warnings; output listing byte-identical across two POSTs."
+}
