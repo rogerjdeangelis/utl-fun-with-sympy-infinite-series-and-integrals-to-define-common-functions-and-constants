@@ -1,0 +1,12 @@
+{
+  "_captured_at": "2026-07-21T00:46:00Z",
+  "_captured_run_id": "r_50f276b4b60b41e7989592f470549c1c",
+  "status": "ok",
+  "exit_code": 0,
+  "log_contains": [
+    "NOTE: Wrote square (100 rows, 7 columns).",
+    "NOTE: PROC PLOT produced 1 plot(s) from 100 observations."
+  ],
+  "log_does_not_contain": ["ERROR:", "[JENNER-ERROR"],
+  "diagnostics": {"parse_warnings": [], "runtime_warnings": []}
+}
